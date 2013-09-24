@@ -1,0 +1,63 @@
+user_name: user
+server_name: jenkins-server-name
+email: user@email.com
+committer_email_enabled: false
+
+repositories:
+    repo_1:
+        type: git  # git, hg, svn
+        url: git@github.com:user/repo1
+        version: master # branch
+        poll: true  # for first level repos always true
+        ros_distro: [groovy, hydro]  # fuerte, groovy, ...
+        prio_ubuntu_distro: oneiric
+        prio_arch: amd64
+        regular_matrix:
+            oneiric: [i386]
+            lucid: [amd64, i386]
+        dependencies:
+            dep_repo_1:
+                type: git  # git, hg, svn
+                url: git@github.com/user_x/dep_repo_1
+                version: master
+                poll: true
+        jobs: [regular_build, prio_graphics_test, prio_nongraphics_test, downstream_build, hardware_build, hardware_test]
+        robots: ['robot_X']
+
+    repo_2:
+        type: git
+        url: git@github.com:user/repo2
+        version: hydro_dev
+        poll: true
+        ros_distro: [hydro]
+        prio_ubuntu_distro: precise
+        prio_arch: amd64
+        regular_matrix:
+        dependencies:
+            dep_repo_1:
+                type: git  # git, hg, svn
+                url: git@github.com/user_x/dep_repo_1
+                version: master
+                poll: true
+            dep_repo_2:
+                type: git  # git, hg, svn
+                url: git@github.com/user_y/dep_repo_2
+                version: master
+                poll: true
+            dep_repo_3:
+                type: git  # git, hg, svn
+                url: git@github.com/user_y/dep_repo_3
+                version: master
+                poll: false
+            dep_repo_4:
+                type: hg  # git, hg, svn
+                url: https://kforge.ros.org/test/dep_repo_4
+                version: master
+                poll: true
+            dep_repo_5:
+                type: svn  # git, hg, svn
+                url: https://code.test.org/svn/test/stacks/dep_repo_5
+                version:
+                poll: true
+        jobs: []
+        robots: []
