@@ -1,0 +1,17 @@
+server_name: thiago-XPS
+user_name: fmw
+repositories:
+  cob_common:
+    ros_distro: [groovy]
+    robots: null
+    jobs: []
+    poll: true
+    dependencies: {}
+    prio_ubuntu_distro: precise
+    regular_matrix: {}
+    prio_arch: amd64
+    type: git
+    url: git@github.com:ipa320/cob_common.git
+    version: ''
+email: fmw@ipa.fhg.de
+committer_email_enabled: false
