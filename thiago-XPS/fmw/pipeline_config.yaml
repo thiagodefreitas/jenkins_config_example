@@ -12,6 +12,6 @@ repositories:
     prio_arch: amd64
     type: git
     url: git@github.com:ipa320/cob_common.git
-    version: ''
+    version: groovy_dev
 email: fmw@ipa.fhg.de
 committer_email_enabled: false
