@@ -1,0 +1,17 @@
+server_name: thiago-xps
+user_name: thiagodefreitas
+repositories:
+  ipa_canopen:
+    ros_distro: [groovy]
+    robots: null
+    jobs: []
+    poll: true
+    dependencies: {}
+    prio_ubuntu_distro: precise
+    regular_matrix: {}
+    prio_arch: amd64
+    type: git
+    url: git@github.com:thiagodefreitas/ipa_canopen.git
+    version: groovy_dev
+email: thiagodefreitas@gmail.com
+committer_email_enabled: false
