@@ -1,0 +1,17 @@
+server_name: thiago-xps
+user_name: ipa-fmw
+repositories:
+  cob_common:
+    ros_distro: [groovy]
+    robots: null
+    jobs: []
+    poll: true
+    dependencies: {}
+    prio_ubuntu_distro: precise
+    regular_matrix: {}
+    prio_arch: amd64
+    type: git
+    url: git@github.com:ipa320/cob_common.git
+    version: groovy_dev
+email: florian.weisshardt@ipa.fraunhofer.de
+committer_email_enabled: false
