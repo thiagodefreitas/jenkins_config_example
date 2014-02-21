@@ -4,11 +4,14 @@ repositories:
   ipa_canopen:
     ros_distro: [groovy]
     robots: null
-    jobs: []
+    jobs: [regular_build]
     poll: true
     dependencies: {}
     prio_ubuntu_distro: precise
-    regular_matrix: {}
+    regular_matrix:
+      oneiric: [amd64, i386]
+      quantal: [amd64, i386]
+      precise: [i386]
     prio_arch: amd64
     type: git
     url: git@github.com:thiagodefreitas/ipa_canopen.git
